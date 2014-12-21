@@ -3,9 +3,21 @@
   "name": "TwitterGram",
   "description": "This extension shows instagram images on twitter.",
   "version": "1.0",
+  "icons": { "148": "logo.png" },
+  "background": {
+    "page": "background.html"
+  },
+  "page_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "Show Instagram Post"
+  },
   "content_scripts": [{
     "js": [ "jquery.min.js", "content_script.js"  ],
-    "matches": [ "http://twitter.com/*", "https://twitter.com/*" ]
+    "matches": [ "http://twitter.com/*", "https://twitter.com/*", "http://api.instagram.com/*", "https://api.instagram.com/*" ]
+
   }],
   "permissions" : [
     "tabs",
