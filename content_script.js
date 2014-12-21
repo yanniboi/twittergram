@@ -27,7 +27,15 @@ function insertPics(){
 
       var imageUrl = res.data.images.standard_resolution.url;
       imageUrl = imageUrl.replace("http://", "https://");
-      $("a."+this.shortcode).append("<img src=\""+imageUrl+"\" width=\"100%\"/>");
+      $("a."+this.shortcode).append("" +
+        "<div class=\"TwitterPhoto js-media-container\">"+
+        "<div class=\"TwitterPhoto-container\" data-card-type=\"photo\" data-element-context=\"platform_photo_card\">"+
+        "<div class=\"TwitterPhoto-media\">"+
+        "<img class=\"TwitterPhoto-mediaSource\" src=\"" + imageUrl + "\" alt=\"Embedded image permalink\" >"+
+        "</div>"+
+        "</div>"+
+        "</div>"
+      );
     };
 
   /**

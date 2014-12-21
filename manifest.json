@@ -3,7 +3,10 @@
   "name": "TwitterGram",
   "description": "This extension shows instagram images on twitter.",
   "version": "1.0",
-  "icons": { "148": "logo.png" },
+  "icons": { "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
   "background": {
     "page": "background.html"
   },
